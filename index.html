@@ -421,6 +421,27 @@
   .badge .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-on-black); animation: pulse 1.8s ease-in-out infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
 
+  .latest-posts { margin-top: 3.2rem; }
+  .latest-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap; margin-bottom: 1.4rem;
+  }
+  .latest-head span:first-child {
+    font-family: var(--font-head); font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-on-black);
+  }
+  .latest-all { font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: var(--gold-on-black); }
+  .latest-all:hover { color: var(--white); }
+
+  .latest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-on-black); border: 1px solid var(--line-on-black); }
+  @media (max-width: 780px) { .latest-grid { grid-template-columns: 1fr; } }
+
+  .latest-card { background: var(--black); padding: 1.6rem 1.4rem; display: flex; flex-direction: column; gap: 0.7rem; transition: background 0.2s; }
+  .latest-card:hover { background: #141414; }
+  .latest-card .cat { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gold-on-black); }
+  .latest-card h3 { font-family: var(--font-head); font-weight: 700; font-size: 1.02rem; line-height: 1.35; margin: 0; color: var(--white); }
+  .latest-card .date { font-size: 0.8rem; color: var(--muted-on-black); }
+
   /* ---------- Contato ---------- */
 
   .contact { background: var(--paper); padding: 6rem 0; }
@@ -602,6 +623,30 @@
     <div class="teaser-box">
       <p>Tudo que ele aprendeu construindo esse ecossistema está sendo organizado pra virar conteúdo. Em breve, aqui.</p>
       <span class="badge"><span class="pulse"></span>Em breve</span>
+    </div>
+
+    <div class="latest-posts">
+      <div class="latest-head">
+        <span>Últimos artigos do blog</span>
+        <a class="latest-all" href="blog/index.html">Ver todos &rarr;</a>
+      </div>
+      <div class="latest-grid">
+        <a class="latest-card" href="blog/time-bom-corrige-sem-drama.html">
+          <span class="cat">Modelo Mental #3</span>
+          <h3>Time bom não é o que nunca erra, é o que corrige rápido sem drama</h3>
+          <span class="date">07 de setembro de 2026</span>
+        </a>
+        <a class="latest-card" href="blog/radar-da-semana-04-09.html">
+          <span class="cat">Radar da Semana</span>
+          <h3>A IA caiu no mesmo dia em que lançou o modelo mais avançado da história</h3>
+          <span class="date">04 de setembro de 2026</span>
+        </a>
+        <a class="latest-card" href="blog/incomodo-malfeito-vira-negocio.html">
+          <span class="cat">Frase Comentada #5</span>
+          <h3>Todo negócio bom nasceu de alguém que se incomodou com algo malfeito</h3>
+          <span class="date">03 de setembro de 2026</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
