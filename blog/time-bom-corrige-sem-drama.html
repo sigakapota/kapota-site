@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time bom corrige rápido sem drama — Klysman Kley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --paper: #f4f3f0;
+    --ink: #101010;
+    --muted: #6b6b6b;
+    --muted-on-black: #9a9a9a;
+    --line: #00000018;
+    --line-on-black: rgba(255, 255, 255, 0.14);
+    --gold: #b3711f;
+    --gold-on-black: #e0a24d;
+    --font-head: "Space Grotesk", ui-sans-serif, sans-serif;
+    --font-body: "JUST Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  a { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  nav a, .navbar a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+  .eyebrow { font-family: var(--font-head); font-size: 0.76rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 1rem; }
+
+  /* ---------- Nav ---------- */
+  .navbar { position: sticky; top: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 1.5rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .navbar .logo { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .navbar .logo .badge-check { width: 16px; height: 16px; border-radius: 50%; background: #3897f0; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; line-height: 1; flex: none; }
+  .navbar .links { display: flex; gap: 1.6rem; font-size: 0.9rem; font-weight: 600; }
+  .navbar .links a:hover { color: var(--gold); }
+
+  /* ---------- Article header ---------- */
+  .art-head { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+  .back { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 1.6rem; }
+  .back:hover { color: var(--gold); }
+  .art-head h1 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: clamp(1.9rem, 4.6vw, 2.7rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.1rem;
+    text-wrap: balance;
+  }
+  .art-meta { display: flex; gap: 1rem; align-items: baseline; font-family: var(--font-head); font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .art-meta .cat { color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.78rem; }
+
+  /* ---------- Article body ---------- */
+  .art-body { padding: 2.6rem 0 4rem; }
+  .art-body p { font-size: 1.08rem; line-height: 1.68; margin: 0 0 1.4rem; text-align: justify; hyphens: auto; }
+  .art-body h2 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: -0.005em;
+    margin: 2.4rem 0 1.1rem;
+  }
+  .lead { font-size: 1.2rem; font-weight: 500; color: var(--ink); }
+  .pull {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.35;
+    color: var(--ink);
+    border-left: 3px solid var(--gold);
+    padding-left: 1.3rem;
+    margin: 2.2rem 0;
+    text-wrap: balance;
+  }
+
+  .sources {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+  .sources h3 { font-family: var(--font-head); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 1rem; }
+  .sources ol { margin: 0; padding-left: 1.2rem; }
+  .sources li { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.5rem; line-height: 1.5; }
+  .sources a { color: var(--muted); text-decoration: underline; }
+  .sources a:hover { color: var(--gold); }
+
+  footer { background: var(--black); color: var(--white); padding: 3.2rem 0 2.4rem; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+  .foot-social { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+  .foot-social a { color: var(--muted-on-black); transition: color 0.2s; display: inline-flex; text-decoration: none; }
+  .foot-social a:hover { color: var(--white); }
+  .foot-social .handle { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; color: var(--muted-on-black); margin-left: 0.3rem; }
+  .foot-rights { color: var(--muted-on-black); font-size: 0.82rem; }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="logo" href="../index.html"><span class="badge-check" aria-hidden="true">&#10003;</span>@kapotalk</a>
+  <div class="links">
+    <a href="../index.html">Início</a>
+    <a href="index.html">Blog</a>
+  </div>
+</nav>
+
+<header class="art-head">
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; Voltar pro blog</a>
+    <div class="art-meta">
+      <span class="cat">Modelo Mental #3</span>
+      <span>07 de setembro de 2026</span>
+    </div>
+    <h1>Time bom não é o que nunca erra, é o que corrige rápido sem drama</h1>
+  </div>
+</header>
+
+<article class="art-body">
+  <div class="wrap">
+    <p class="lead">Em 2012, o CEO da Apple mandou os próprios clientes usarem o mapa do concorrente. Em 2017, um comando digitado errado na Amazon derrubou boa parte da internet por mais de quatro horas. Nenhuma das duas empresas venceu por não errar. Venceram porque criaram um jeito de admitir o erro rápido, sem ego e sem desculpa.</p>
+
+    <h2>O mapa que não funcionava</h2>
+    <p>Em setembro de 2012, a Apple lançou seu próprio aplicativo de mapas pra substituir o Google Maps no iPhone. O resultado virou piada mundial: rotas erradas, pontes que não existiam, cidades inteiras deslocadas de lugar. Nove dias depois, Tim Cook publicou uma carta aberta assumindo o erro. Recomendou que os clientes usassem, temporariamente, o Google Maps, o Bing ou o Waze até a Apple corrigir o próprio aplicativo.</p>
+
+    <p class="pull">Nove dias depois, o CEO da Apple mandou os próprios clientes baixarem o mapa do concorrente.</p>
+
+    <h2>O apagão que ninguém queria admitir</h2>
+    <p>Em 28 de fevereiro de 2017, um funcionário da Amazon digitou um comando de rotina pra remover um pequeno grupo de servidores do S3, o serviço de armazenamento que sustenta boa parte da internet. O comando, mal calibrado, removeu servidores demais de dois subsistemas inteiros na região us-east-1. O resultado foi um apagão de 4 horas e 17 minutos que tirou do ar milhares de sites e aplicativos que dependiam do serviço.</p>
+
+    <p>No relatório oficial, publicado no mesmo dia, a Amazon nunca citou o nome de quem digitou o comando errado. Tratou como falha de processo, não de pessoa, e anunciou correções concretas: um limite de segurança pra esse tipo de comando, auditoria de outras ferramentas parecidas e mudanças na arquitetura do sistema de índice.</p>
+
+    <h2>O mesmo processo por baixo</h2>
+    <p>Isso não é acidente. A Amazon tem um processo interno criado pelo próprio Jeff Bezos, chamado Correction of Error. Depois de qualquer falha, um documento obrigatório usa a técnica dos cinco porquês até chegar na causa raiz. Se a cadeia de causas termina em "o funcionário errou", o documento é devolvido. Não é aceito.</p>
+
+    <h2>A aplicação</h2>
+    <p>A diferença entre os dois casos não apareceu no erro. Apareceu depois dele: velocidade de resposta, ausência de um culpado individual e foco em corrigir o sistema, não em punir a pessoa. É esse o modelo mental que ele defende pros negócios que constrói. Erro não é o problema. O problema é o tempo e o drama entre o erro e a correção.</p>
+
+    <div class="sources">
+      <h3>Fontes</h3>
+      <ol>
+        <li><a href="https://techcrunch.com/2012/09/28/tim-cook-apologizes-for-apple-maps-points-to-competitive-alternatives/" target="_blank" rel="noopener">TechCrunch, 28/09/2012</a></li>
+        <li><a href="https://9to5mac.com/2012/09/28/tim-cook-apologizes-to-customers-over-apples-maps-controversy/" target="_blank" rel="noopener">9to5Mac, 28/09/2012</a></li>
+        <li><a href="https://money.cnn.com/2012/09/28/technology/apple-ceo-letter-maps/index.html" target="_blank" rel="noopener">CNN Money, 28/09/2012</a></li>
+        <li><a href="https://aws.amazon.com/message/41926/" target="_blank" rel="noopener">Relatório oficial da AWS sobre o apagão de 28/02/2017</a></li>
+        <li><a href="https://workingbackwards.com/blog/amazons-correction-of-error-process-for-lasting-improvement/" target="_blank" rel="noopener">Working Backwards, sobre o processo Correction of Error da Amazon</a></li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-social">
+        <a href="https://instagram.com/kapotalk" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://tiktok.com/@kapotalk" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14.5 3c.4 2.2 1.9 3.7 4.2 3.9v2.7c-1.5.1-2.9-.3-4.2-1.2v6.4c0 3-2.4 5.2-5.3 5.2-3 0-5.3-2.4-5.3-5.3 0-3 2.4-5.3 5.3-5.3.4 0 .8 0 1.2.1v2.8c-.4-.1-.8-.2-1.2-.2-1.5 0-2.6 1.2-2.6 2.6 0 1.5 1.2 2.6 2.6 2.6 1.5 0 2.7-1.1 2.7-2.6V3h2.6z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kapotalk/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="9" width="3.5" height="12" rx="0.5"/><circle cx="4.75" cy="4.75" r="2.1"/><path d="M10 9h3.4v1.7c.7-1.1 1.9-2 3.7-2 3 0 3.9 1.9 3.9 4.6V21h-3.5v-6.1c0-1.4-.5-2.4-1.8-2.4-1.4 0-2.2 1-2.2 2.4V21H10z"/></svg>
+        </a>
+        <span class="handle">@kapotalk</span>
+      </div>
+      <span class="foot-rights">Todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
