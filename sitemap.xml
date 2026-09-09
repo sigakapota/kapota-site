@@ -9,19 +9,15 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kapota.com.br/blog/time-bom-corrige-sem-drama/</loc>
+    <loc>https://kapota.com.br/blog/contrato-vale-mais-que-medo/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kapota.com.br/blog/radar-da-semana-04-09/</loc>
+    <loc>https://kapota.com.br/blog/esperar-oportunidade-trava-empresa/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kapota.com.br/blog/incomodo-malfeito-vira-negocio/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kapota.com.br/blog/spotify-nasceu-pra-matar-pirataria/</loc>
+    <loc>https://kapota.com.br/blog/ferramentas-mudaram-de-funcao/</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -29,11 +25,35 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kapota.com.br/blog/incomodo-malfeito-vira-negocio/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kapota.com.br/blog/nao-sao-os-mais-fortes-que-sobrevivem/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kapota.com.br/blog/ferramentas-mudaram-de-funcao/</loc>
+    <loc>https://kapota.com.br/blog/oportunidades-nao-acontecem-voce-cria/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kapota.com.br/blog/radar-da-semana-04-09/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kapota.com.br/blog/spotify-nasceu-pra-matar-pirataria/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kapota.com.br/blog/time-bom-corrige-sem-drama/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kapota.com.br/blog/tres-as-da-vida/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kapota.com.br/blog/viral-nao-e-o-mesmo-que-ser-pago/</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -42,26 +62,6 @@
   </url>
   <url>
     <loc>https://kapota.com.br/blog/youtube-visualizacao-engajada/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kapota.com.br/blog/tres-as-da-vida/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kapota.com.br/blog/esperar-oportunidade-trava-empresa/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kapota.com.br/blog/oportunidades-nao-acontecem-voce-cria/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kapota.com.br/blog/contrato-vale-mais-que-medo/</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://kapota.com.br/blog/viral-nao-e-o-mesmo-que-ser-pago/</loc>
     <priority>0.7</priority>
   </url>
 </urlset>
