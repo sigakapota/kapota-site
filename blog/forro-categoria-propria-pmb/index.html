@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forró ganha categoria própria no PMB — Klysman Kley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --paper: #f4f3f0;
+    --ink: #101010;
+    --muted: #6b6b6b;
+    --muted-on-black: #9a9a9a;
+    --line: #00000018;
+    --line-on-black: rgba(255, 255, 255, 0.14);
+    --gold: #b3711f;
+    --gold-on-black: #e0a24d;
+    --font-head: "Space Grotesk", ui-sans-serif, sans-serif;
+    --font-body: "JUST Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  a { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  nav a, .navbar a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .navbar { position: sticky; top: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 1.5rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .navbar .logo { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .navbar .logo .badge-check { width: 16px; height: 16px; border-radius: 50%; background: #3897f0; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; line-height: 1; flex: none; }
+  .navbar .links { display: flex; gap: 1.6rem; font-size: 0.9rem; font-weight: 600; }
+  .navbar .links a:hover { color: var(--gold); }
+
+  .art-head { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+  .back { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 1.6rem; }
+  .back:hover { color: var(--gold); }
+  .art-head h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.9rem, 4.6vw, 2.7rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 1.1rem; text-wrap: balance; }
+  .art-meta { display: flex; gap: 1rem; align-items: baseline; font-family: var(--font-head); font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .art-meta .cat { color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.78rem; }
+
+  .art-body { padding: 2.6rem 0 4rem; }
+  .art-body p { font-size: 1.08rem; line-height: 1.68; margin: 0 0 1.4rem; text-align: justify; hyphens: auto; }
+  .art-body h2 { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; letter-spacing: -0.005em; margin: 2.4rem 0 1.1rem; }
+  .lead { font-size: 1.2rem; font-weight: 500; color: var(--ink); }
+  .pull { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; line-height: 1.35; color: var(--ink); border-left: 3px solid var(--gold); padding-left: 1.3rem; margin: 2.2rem 0; text-wrap: balance; }
+
+  .sources { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .sources h3 { font-family: var(--font-head); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 1rem; }
+  .sources ol { margin: 0; padding-left: 1.2rem; }
+  .sources li { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.5rem; line-height: 1.5; }
+  .sources a { color: var(--muted); text-decoration: underline; }
+  .sources a:hover { color: var(--gold); }
+
+  footer { background: var(--black); color: var(--white); padding: 3.2rem 0 2.4rem; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+  .foot-social { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+  .foot-social a { color: var(--muted-on-black); transition: color 0.2s; display: inline-flex; text-decoration: none; }
+  .foot-social a:hover { color: var(--white); }
+  .foot-social .handle { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; color: var(--muted-on-black); margin-left: 0.3rem; }
+  .foot-rights { color: var(--muted-on-black); font-size: 0.82rem; }
+</style>
+<meta name="description" content="Depois de décadas entrando como sertanejo, o forró ganhou categoria própria no Prêmio da Música Brasileira, por campanha de João Gomes em homenagem a Luiz Gonzaga.">
+<link rel="canonical" href="https://kapota.com.br/blog/forro-categoria-propria-pmb/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../assets/icon-192.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Forró ganha categoria própria no PMB — Klysman Kley">
+<meta property="og:description" content="Depois de décadas entrando como sertanejo, o forró ganhou categoria própria no Prêmio da Música Brasileira, por campanha de João Gomes em homenagem a Luiz Gonzaga.">
+<meta property="og:url" content="https://kapota.com.br/blog/forro-categoria-propria-pmb/">
+<meta property="og:image" content="https://kapota.com.br/assets/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Klysman Kley">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Forró ganha categoria própria no PMB — Klysman Kley">
+<meta name="twitter:description" content="Depois de décadas entrando como sertanejo, o forró ganhou categoria própria no Prêmio da Música Brasileira, por campanha de João Gomes em homenagem a Luiz Gonzaga.">
+<meta name="twitter:image" content="https://kapota.com.br/assets/og-image.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Forró ganha categoria própria no PMB", "datePublished": "2026-08-31", "author": {"@type": "Person", "name": "Klysman Kley", "alternateName": "Kapota"}, "publisher": {"@type": "Person", "name": "Klysman Kley"}, "mainEntityOfPage": "https://kapota.com.br/blog/forro-categoria-propria-pmb/", "image": "https://kapota.com.br/assets/og-image.jpg"}</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="logo" href="../../"><span class="badge-check" aria-hidden="true">&#10003;</span>@kapotalk</a>
+  <div class="links">
+    <a href="../../">Início</a>
+    <a href="../">Blog</a>
+  </div>
+</nav>
+
+<header class="art-head">
+  <div class="wrap">
+    <a class="back" href="../">&larr; Voltar pro blog</a>
+    <div class="art-meta">
+      <span class="cat">Avulso</span>
+      <span>31 de agosto de 2026</span>
+    </div>
+    <h1>Forró ganha categoria própria no PMB</h1>
+  </div>
+</header>
+
+<article class="art-body">
+  <div class="wrap">
+    <p class="lead">O forró acabou de ganhar uma casa própria. O Prêmio da Música Brasileira criou uma categoria só pro gênero, depois de décadas sem ter uma.</p>
+
+    <h2>O que aconteceu</h2>
+    <p>O anúncio saiu direto do artista João Gomes, em parceria com a conta oficial do prêmio. Até aqui, o forró não tinha um espaço só dele dentro de uma das premiações mais tradicionais da música brasileira, que existe desde 1988.</p>
+
+    <h2>O problema que isso resolve</h2>
+    <p>Antes, forró entrava como sertanejo. O próprio João Gomes já tinha vencido o prêmio, mas na categoria Sertanejo, que ele considera um encaixe errado. Sertanejo é a música do sertão de um jeito, forró é a música do sertão nordestino de outro. Os dois vinham sendo tratados como a mesma coisa dentro do prêmio.</p>
+
+    <h2>De onde isso vem</h2>
+    <p>No anúncio, João Gomes dedicou a conquista a Luiz Gonzaga, o Gonzagão, criador de boa parte das músicas que ainda tocam em quadrilha e São João até hoje. Pra ele, essa categoria é reconhecimento de uma tradição que existe há décadas e nunca teve seu próprio espaço.</p>
+
+    <h2>O que ele pensa sobre isso</h2>
+    <p class="pull">Toda categoria nova começa com uma história que ninguém tinha contado direito ainda.</p>
+    <p>Toda comunidade que se sustenta no tempo acaba conquistando o espaço que já era dela. O forró levou anos pra ter uma categoria só dele, mesmo sendo gigante, com história e público de sobra. Isso não muda apenas com discurso, muda com gente insistindo até virar impossível de ignorar.</p>
+    <p>As inscrições da categoria nova abrem em breve.</p>
+
+    <div class="sources">
+      <h3>Fontes</h3>
+      <ol>
+        <li>Instagram, @joaogomescantor em colaboração com @premiomusicabr</li>
+        <li><a href="https://pt.wikipedia.org/wiki/Pr%C3%AAmio_da_M%C3%BAsica_Brasileira" target="_blank" rel="noopener">Wikipédia, Prêmio da Música Brasileira</a></li>
+        <li><a href="https://pt.wikipedia.org/wiki/Pr%C3%AAmio_da_M%C3%BAsica_Brasileira_de_2025" target="_blank" rel="noopener">Wikipédia, Prêmio da Música Brasileira de 2025</a></li>
+      </ol>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-social">
+        <a href="https://instagram.com/kapotalk" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://tiktok.com/@kapotalk" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14.5 3c.4 2.2 1.9 3.7 4.2 3.9v2.7c-1.5.1-2.9-.3-4.2-1.2v6.4c0 3-2.4 5.2-5.3 5.2-3 0-5.3-2.4-5.3-5.3 0-3 2.4-5.3 5.3-5.3.4 0 .8 0 1.2.1v2.8c-.4-.1-.8-.2-1.2-.2-1.5 0-2.6 1.2-2.6 2.6 0 1.5 1.2 2.6 2.6 2.6 1.5 0 2.7-1.1 2.7-2.6V3h2.6z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kapotalk/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="9" width="3.5" height="12" rx="0.5"/><circle cx="4.75" cy="4.75" r="2.1"/><path d="M10 9h3.4v1.7c.7-1.1 1.9-2 3.7-2 3 0 3.9 1.9 3.9 4.6V21h-3.5v-6.1c0-1.4-.5-2.4-1.8-2.4-1.4 0-2.2 1-2.2 2.4V21H10z"/></svg>
+        </a>
+        <span class="handle">@kapotalk</span>
+      </div>
+      <span class="foot-rights">Todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
