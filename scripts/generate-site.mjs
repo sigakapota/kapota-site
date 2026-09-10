@@ -9,45 +9,32 @@
 import { readdirSync, readFileSync, statSync, writeFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { getPosts, SITE } from "./lib/posts.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BLOG_DIR = join(ROOT, "blog");
-const SITE = "https://kapota.com.br";
 
-function unescapeAttr(s) {
-  return s.replace(/&quot;/g, '"').replace(/&amp;/g, "&");
+const posts = getPosts(ROOT);
+
+// ---------- newsletter self-heal (garante o script em todos os posts) ----------
+const NEWSLETTER_SCRIPT_TAG = '<script src="/assets/newsletter.js" defer></script>';
+
+function ensureNewsletterScript(html) {
+  if (html.includes(NEWSLETTER_SCRIPT_TAG)) return html;
+  return html.replace("</body>", `${NEWSLETTER_SCRIPT_TAG}\n</body>`);
 }
 
-function extract(html, regex, label, slug) {
-  const m = html.match(regex);
-  if (!m) throw new Error(`${label} não encontrado em blog/${slug}/index.html`);
-  return m[1];
+for (const post of posts) {
+  const path = join(BLOG_DIR, post.slug, "index.html");
+  const original = readFileSync(path, "utf8");
+  const patched = ensureNewsletterScript(original);
+  if (patched !== original) writeFileSync(path, patched);
 }
 
-const slugs = readdirSync(BLOG_DIR)
-  .filter((name) => {
-    const full = join(BLOG_DIR, name);
-    return statSync(full).isDirectory() && existsSync(join(full, "index.html"));
-  })
-  .sort();
-
-const posts = slugs.map((slug) => {
-  const html = readFileSync(join(BLOG_DIR, slug, "index.html"), "utf8");
-  const category = unescapeAttr(extract(html, /<span class="cat">([^<]+)<\/span>/, "categoria", slug));
-  const dateDisplay = unescapeAttr(
-    extract(html, /<span class="cat">[^<]+<\/span>\s*<span>([^<]+)<\/span>/, "data exibida", slug)
-  );
-  const dateISO = extract(html, /"datePublished":\s*"([0-9-]+)"/, "datePublished", slug);
-  const title = unescapeAttr(extract(html, /<h1>([^]*?)<\/h1>/, "título", slug)).trim();
-  const excerptMatch =
-    html.match(/<meta name="blog-excerpt" content="([^"]*)">/) ||
-    html.match(/<meta name="description" content="([^"]*)">/);
-  if (!excerptMatch) throw new Error(`excerpt não encontrado em blog/${slug}/index.html`);
-  const excerpt = unescapeAttr(excerptMatch[1]);
-  return { slug, category, dateDisplay, dateISO, title, excerpt };
-});
-
-posts.sort((a, b) => (a.dateISO < b.dateISO ? 1 : a.dateISO > b.dateISO ? -1 : 0));
+const blogIndexPath = join(BLOG_DIR, "index.html");
+const blogIndexOriginalForHeal = readFileSync(blogIndexPath, "utf8");
+const blogIndexPatchedForHeal = ensureNewsletterScript(blogIndexOriginalForHeal);
+if (blogIndexPatchedForHeal !== blogIndexOriginalForHeal) writeFileSync(blogIndexPath, blogIndexPatchedForHeal);
 
 // ---------- sitemap.xml ----------
 const urls = [
