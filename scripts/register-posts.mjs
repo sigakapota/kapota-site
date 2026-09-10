@@ -19,7 +19,7 @@ let failureCount = 0;
 
 for (const post of posts) {
   try {
-    const res = await fetch(`${WORKER_URL}/admin/send`, {
+    const res = await fetch(`${WORKER_URL}/admin/register-post`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,18 +31,19 @@ for (const post of posts) {
         excerpt: post.excerpt,
         category: post.category,
         url: `${SITE}/blog/${post.slug}/`,
+        dateISO: post.dateISO,
       }),
     });
     const data = await res.json();
     if (!res.ok) {
       failureCount++;
-      console.error(`${post.slug}: Falha ao notificar: ${res.status} ${JSON.stringify(data)}`);
+      console.error(`${post.slug}: Falha ao registrar: ${res.status} ${JSON.stringify(data)}`);
     } else {
       console.log(`${post.slug}: ${res.status} ${JSON.stringify(data)}`);
     }
   } catch (error) {
     failureCount++;
-    console.error(`${post.slug}: Erro ao notificar: ${error.message}`);
+    console.error(`${post.slug}: Erro ao registrar: ${error.message}`);
   }
 }
 

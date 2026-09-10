@@ -31,8 +31,8 @@ jobs:
           git commit -m "Atualiza sitemap, listagem do blog e destaques da home automaticamente"
           git push
 
-      - name: Avisar assinantes de post novo
+      - name: Registrar posts na newsletter
         env:
           NEWSLETTER_WORKER_URL: ${{ secrets.NEWSLETTER_WORKER_URL }}
           NEWSLETTER_ADMIN_SECRET: ${{ secrets.NEWSLETTER_ADMIN_SECRET }}
-        run: node scripts/notify-subscribers.mjs
+        run: node scripts/register-posts.mjs
