@@ -1,5 +1,9 @@
 #!/usr/bin/env node
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
 import { getPosts, SITE } from "./lib/posts.mjs";
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 
 const WORKER_URL = process.env.NEWSLETTER_WORKER_URL;
 const ADMIN_SECRET = process.env.NEWSLETTER_ADMIN_SECRET;
@@ -9,7 +13,7 @@ if (!WORKER_URL || !ADMIN_SECRET) {
   process.exit(1);
 }
 
-const posts = getPosts(process.cwd());
+const posts = getPosts(ROOT);
 
 let failureCount = 0;
 
@@ -30,7 +34,12 @@ for (const post of posts) {
       }),
     });
     const data = await res.json();
-    console.log(`${post.slug}: ${res.status} ${JSON.stringify(data)}`);
+    if (!res.ok) {
+      failureCount++;
+      console.error(`${post.slug}: Falha ao notificar: ${res.status} ${JSON.stringify(data)}`);
+    } else {
+      console.log(`${post.slug}: ${res.status} ${JSON.stringify(data)}`);
+    }
   } catch (error) {
     failureCount++;
     console.error(`${post.slug}: Erro ao notificar: ${error.message}`);

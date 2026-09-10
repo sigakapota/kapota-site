@@ -19,12 +19,6 @@ jobs:
       - name: Gerar sitemap.xml, blog/index.html e index.html
         run: node scripts/generate-site.mjs
 
-      - name: Avisar assinantes de post novo
-        env:
-          NEWSLETTER_WORKER_URL: ${{ secrets.NEWSLETTER_WORKER_URL }}
-          NEWSLETTER_ADMIN_SECRET: ${{ secrets.NEWSLETTER_ADMIN_SECRET }}
-        run: node scripts/notify-subscribers.mjs
-
       - name: Commitar se mudou
         run: |
           if git diff --quiet sitemap.xml blog/index.html index.html blog/*/index.html assets/newsletter.js; then
@@ -36,3 +30,9 @@ jobs:
           git add sitemap.xml blog/index.html index.html blog/*/index.html assets/newsletter.js
           git commit -m "Atualiza sitemap, listagem do blog e destaques da home automaticamente"
           git push
+
+      - name: Avisar assinantes de post novo
+        env:
+          NEWSLETTER_WORKER_URL: ${{ secrets.NEWSLETTER_WORKER_URL }}
+          NEWSLETTER_ADMIN_SECRET: ${{ secrets.NEWSLETTER_ADMIN_SECRET }}
+        run: node scripts/notify-subscribers.mjs
