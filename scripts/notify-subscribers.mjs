@@ -11,21 +11,32 @@ if (!WORKER_URL || !ADMIN_SECRET) {
 
 const posts = getPosts(process.cwd());
 
+let failureCount = 0;
+
 for (const post of posts) {
-  const res = await fetch(`${WORKER_URL}/admin/send`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${ADMIN_SECRET}`,
-    },
-    body: JSON.stringify({
-      slug: post.slug,
-      title: post.title,
-      excerpt: post.excerpt,
-      category: post.category,
-      url: `${SITE}/blog/${post.slug}/`,
-    }),
-  });
-  const data = await res.json();
-  console.log(`${post.slug}: ${res.status} ${JSON.stringify(data)}`);
+  try {
+    const res = await fetch(`${WORKER_URL}/admin/send`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${ADMIN_SECRET}`,
+      },
+      body: JSON.stringify({
+        slug: post.slug,
+        title: post.title,
+        excerpt: post.excerpt,
+        category: post.category,
+        url: `${SITE}/blog/${post.slug}/`,
+      }),
+    });
+    const data = await res.json();
+    console.log(`${post.slug}: ${res.status} ${JSON.stringify(data)}`);
+  } catch (error) {
+    failureCount++;
+    console.error(`${post.slug}: Erro ao notificar: ${error.message}`);
+  }
+}
+
+if (failureCount > 0) {
+  process.exit(1);
 }
