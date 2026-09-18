@@ -69,6 +69,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kapota.com.br/blog/openai-anthropic-google-pacto-seguranca-ia/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kapota.com.br/blog/openai-chatgpt-images-2-5-lancamento/</loc>
     <priority>0.7</priority>
   </url>
@@ -89,7 +93,15 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kapota.com.br/blog/spotify-fresh-finds-forward-artistas-independentes/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kapota.com.br/blog/spotify-nasceu-pra-matar-pirataria/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kapota.com.br/blog/spotify-partner-program-chega-brasil/</loc>
     <priority>0.7</priority>
   </url>
   <url>
