@@ -85,6 +85,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kapota.com.br/blog/pl-streaming-brasil-condecine-senado/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kapota.com.br/blog/radar-da-semana-04-09/</loc>
     <priority>0.7</priority>
   </url>
@@ -101,11 +105,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://kapota.com.br/blog/spotify-integra-muse-meta-playlist-por-conversa/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://kapota.com.br/blog/spotify-nasceu-pra-matar-pirataria/</loc>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kapota.com.br/blog/spotify-partner-program-chega-brasil/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kapota.com.br/blog/spotify-reserved-share-cards-setlist/</loc>
     <priority>0.7</priority>
   </url>
   <url>
