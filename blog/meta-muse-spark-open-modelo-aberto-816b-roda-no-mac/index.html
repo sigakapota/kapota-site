@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Meta liberou um modelo de IA de 816 bilhões de parâmetros com pesos abertos, e ele roda em Mac Studio — Klysman Kley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --paper: #f4f3f0;
+    --ink: #101010;
+    --muted: #6b6b6b;
+    --muted-on-black: #9a9a9a;
+    --line: #00000018;
+    --line-on-black: rgba(255, 255, 255, 0.14);
+    --gold: #b3711f;
+    --gold-on-black: #e0a24d;
+    --font-head: "Space Grotesk", ui-sans-serif, sans-serif;
+    --font-body: "JUST Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  a { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  nav a, .navbar a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .navbar { position: sticky; top: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 1.5rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .navbar .logo { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .navbar .logo .badge-check { width: 16px; height: 16px; border-radius: 50%; background: #3897f0; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; line-height: 1; flex: none; }
+  .navbar .links { display: flex; gap: 1.6rem; font-size: 0.9rem; font-weight: 600; }
+  .navbar .links a:hover { color: var(--gold); }
+
+  .art-head { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+  .back { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 1.6rem; }
+  .back:hover { color: var(--gold); }
+  .art-head h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.9rem, 4.6vw, 2.7rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 1.1rem; text-wrap: balance; }
+  .art-meta { display: flex; gap: 1rem; align-items: baseline; font-family: var(--font-head); font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .art-meta .cat { color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.78rem; }
+
+  .art-body { padding: 2.6rem 0 4rem; }
+  .art-body p { font-size: 1.08rem; line-height: 1.68; margin: 0 0 1.4rem; text-align: justify; hyphens: auto; }
+  .art-body h2 { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; letter-spacing: -0.005em; margin: 2.4rem 0 1.1rem; }
+  .lead { font-size: 1.2rem; font-weight: 500; color: var(--ink); }
+  .pull { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; line-height: 1.35; color: var(--ink); border-left: 3px solid var(--gold); padding-left: 1.3rem; margin: 2.2rem 0; text-wrap: balance; }
+
+  .sources { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .sources h3 { font-family: var(--font-head); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 1rem; }
+  .sources ol { margin: 0; padding-left: 1.2rem; }
+  .sources li { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.5rem; line-height: 1.5; }
+  .sources a { color: var(--muted); text-decoration: underline; }
+  .sources a:hover { color: var(--gold); }
+
+  footer { background: var(--black); color: var(--white); padding: 3.2rem 0 2.4rem; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+  .foot-social { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+  .foot-social a { color: var(--muted-on-black); transition: color 0.2s; display: inline-flex; text-decoration: none; }
+  .foot-social a:hover { color: var(--white); }
+  .foot-social .handle { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; color: var(--muted-on-black); margin-left: 0.3rem; }
+  .foot-rights { color: var(--muted-on-black); font-size: 0.82rem; }
+</style>
+<meta name="description" content="A Meta lançou o Muse Spark Open, modelo multimodal de 816 bilhões de parâmetros com pesos abertos e janela de 1 milhão de tokens. Dá pra rodar em Macs, mas exige muita memória.">
+<meta name="blog-excerpt" content="O Muse Spark Open, da Meta, tem 816 bilhões de parâmetros, 1 milhão de tokens de contexto e pesos abertos. Roda em Mac Studio, mas só em versões comprimidas e com mais de 300 GB de memória.">
+<link rel="canonical" href="https://kapota.com.br/blog/meta-muse-spark-open-modelo-aberto-816b-roda-no-mac/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../assets/icon-192.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Meta liberou um modelo de IA de 816 bilhões de parâmetros com pesos abertos, e ele roda em Mac Studio — Klysman Kley">
+<meta property="og:description" content="A Meta lançou o Muse Spark Open, modelo multimodal de 816 bilhões de parâmetros com pesos abertos e janela de 1 milhão de tokens. Dá pra rodar em Macs, mas exige muita memória.">
+<meta property="og:url" content="https://kapota.com.br/blog/meta-muse-spark-open-modelo-aberto-816b-roda-no-mac/">
+<meta property="og:image" content="https://kapota.com.br/assets/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Klysman Kley">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Meta liberou um modelo de IA de 816 bilhões de parâmetros com pesos abertos, e ele roda em Mac Studio — Klysman Kley">
+<meta name="twitter:description" content="A Meta lançou o Muse Spark Open, modelo multimodal de 816 bilhões de parâmetros com pesos abertos e janela de 1 milhão de tokens. Dá pra rodar em Macs, mas exige muita memória.">
+<meta name="twitter:image" content="https://kapota.com.br/assets/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"A Meta liberou um modelo de IA de 816 bilhões de parâmetros com pesos abertos, e ele roda em Mac Studio","datePublished":"2026-10-17","author":{"@type":"Person","name":"Klysman Kley","alternateName":"Kapota"},"publisher":{"@type":"Person","name":"Klysman Kley"},"mainEntityOfPage":"https://kapota.com.br/blog/meta-muse-spark-open-modelo-aberto-816b-roda-no-mac/","image":"https://kapota.com.br/assets/og-image.jpg"}</script>
+</head>
+<body>
+<nav class="navbar">
+  <a class="logo" href="../../"><span class="badge-check" aria-hidden="true">&#10003;</span>@kapotalk</a>
+  <div class="links">
+    <a href="../../">Início</a>
+    <a href="../">Blog</a>
+  </div>
+</nav>
+<header class="art-head">
+  <div class="wrap">
+    <a class="back" href="../">&larr; Voltar pro blog</a>
+    <div class="art-meta">
+      <span class="cat">Radar de Notícias</span>
+      <span>17 de outubro de 2026</span>
+    </div>
+    <h1>A Meta liberou um modelo de IA de 816 bilhões de parâmetros com pesos abertos, e ele roda em Mac Studio</h1>
+  </div>
+</header>
+<article class="art-body">
+  <div class="wrap">
+    <p class="lead">A Meta publicou em 15 de outubro os pesos do Muse Spark Open, um modelo multimodal com 816 bilhões de parâmetros totais, cerca de 42 bilhões ativos por token e janela de contexto de até 1 milhão de tokens. A empresa o chama de o modelo de pesos abertos mais capaz já feito nos Estados Unidos, e o destaque é que ele foi pensado pra rodar localmente em computadores da Apple.</p>
+    <h2>O que é o modelo</h2>
+    <p>O Muse Spark Open usa uma arquitetura de mistura de especialistas, com 256 especialistas por camada e 8 acionados a cada token. É por isso que o total de parâmetros é gigante, mas só uma fração entra em ação em cada resposta. A Hugging Face descreve o modelo como o tamanho completo da linha Muse, que veio depois do Muse Glimmer, menor e denso, lançado em agosto. Ele é nativamente multimodal e foi voltado a programação complexa e trabalho com agentes.</p>
+    <p>A Meta o apresentou em exemplos práticos: o modelo trabalhando junto do Muse Code, o terminal de programação da empresa, corrigindo falhas e criando funções num cliente de Mastodon, e também ligado ao DaVinci Resolve pra revisar e recortar imagens. O modelo está disponível por várias plataformas de API.</p>
+    <h2>A parte do Mac, com a ressalva necessária</h2>
+    <p>O discurso de que o modelo roda em Mac precisa de contexto. O TechCrunch, citando a Engadget, fala em pelo menos 1 TB de memória, e o desempenho ideal vem do Mac Studio com chip M5 Ultra. A Hugging Face mostra versões comprimidas que cabem em menos: uma quantização de 2 bits rodou a cerca de 18 tokens por segundo num Mac M3 Ultra com 512 GB, ocupando perto de 304 GB, e uma de 3 bits pelo MLX gastou cerca de 344 GB, com mais ou menos 21 tokens por segundo. Ou seja, é possível em uma máquina topo de linha, não em notebook comum.</p>
+    <p class="pull">Pesos abertos não significam acesso democrático: o computador que roda o modelo custa mais que um carro popular, e a diferença está em quem controla o equipamento.</p>
+    <h2>Pesos abertos, mas qual licença</h2>
+    <p>As fontes consultadas divergem em detalhe. Um relato fala em Muse Model License, mas nem o TechCrunch nem a página da Hugging Face trazem os termos de uso comercial, e a Meta não tinha divulgado comparações numéricas com concorrentes nas fontes lidas. Antes de colocar o modelo num produto, vale ler a licença na fonte, porque a Meta já usou licenças com restrições em lançamentos anteriores.</p>
+    <h2>O que isso muda</h2>
+    <p>O lançamento mexe em dois lados. Pra empresa que não pode mandar dado sensível pra nuvem, como escritório de advocacia, produtora e gravadora com contrato confidencial, um modelo de ponta que roda dentro de casa deixa de ser promessa. E pra quem vende IA como serviço, a pressão de preço aumenta, porque cada modelo aberto de bom nível empurra pra baixo o valor do que é fechado.</p>
+    <p>Pra criador e pequeno negócio, o efeito é indireto por enquanto. Quem vai sentir primeiro são os desenvolvedores e as empresas que montam ferramentas em cima do modelo, e o preço de entrada é alto. Mas a direção é clara: o que hoje exige um Mac Studio de 512 GB tende a caber em máquinas menores quando as versões comprimidas melhorarem, e a Meta, depois de anos chamando o Llama de aberto, volta a disputar esse terreno com um modelo de peso.</p>
+    <div class="sources">
+      <h3>Fontes</h3>
+      <ol>
+        <li><a href="https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/" target="_blank" rel="noopener">TechCrunch</a></li>
+        <li><a href="https://huggingface.co/blog/meta-muse-spark-open" target="_blank" rel="noopener">Hugging Face: Welcome Muse Spark Open</a></li>
+        <li><a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener">Meta Research</a></li>
+        <li><a href="https://analyticsindiamag.com/ai-news/meta-releases-muse-spark-an-816b-parameter-open-weight-model-with-1m-context-window" target="_blank" rel="noopener">Analytics India Magazine</a></li>
+      </ol>
+    </div>
+  </div>
+</article>
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-social">
+        <a href="https://instagram.com/kapotalk" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://tiktok.com/@kapotalk" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14.5 3c.4 2.2 1.9 3.7 4.2 3.9v2.7c-1.5.1-2.9-.3-4.2-1.2v6.4c0 3-2.4 5.2-5.3 5.2-3 0-5.3-2.4-5.3-5.3 0-3 2.4-5.3 5.3-5.3.4 0 .8 0 1.2.1v2.8c-.4-.1-.8-.2-1.2-.2-1.5 0-2.6 1.2-2.6 2.6 0 1.5 1.2 2.6 2.6 2.6 1.5 0 2.7-1.1 2.7-2.6V3h2.6z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kapotalk/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="9" width="3.5" height="12" rx="0.5"/><circle cx="4.75" cy="4.75" r="2.1"/><path d="M10 9h3.4v1.7c.7-1.1 1.9-2 3.7-2 3 0 3.9 1.9 3.9 4.6V21h-3.5v-6.1c0-1.4-.5-2.4-1.8-2.4-1.4 0-2.2 1-2.2 2.4V21H10z"/></svg>
+        </a>
+        <span class="handle">@kapotalk</span>
+      </div>
+      <span class="foot-rights">Todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/newsletter.js" defer></script>
+</body>
+</html>

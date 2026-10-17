@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O YouTube Music começou a carimbar música feita por IA, e quem decide o carimbo é o próprio selo — Klysman Kley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --paper: #f4f3f0;
+    --ink: #101010;
+    --muted: #6b6b6b;
+    --muted-on-black: #9a9a9a;
+    --line: #00000018;
+    --line-on-black: rgba(255, 255, 255, 0.14);
+    --gold: #b3711f;
+    --gold-on-black: #e0a24d;
+    --font-head: "Space Grotesk", ui-sans-serif, sans-serif;
+    --font-body: "JUST Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  a { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  nav a, .navbar a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .navbar { position: sticky; top: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 1.5rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .navbar .logo { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .navbar .logo .badge-check { width: 16px; height: 16px; border-radius: 50%; background: #3897f0; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; line-height: 1; flex: none; }
+  .navbar .links { display: flex; gap: 1.6rem; font-size: 0.9rem; font-weight: 600; }
+  .navbar .links a:hover { color: var(--gold); }
+
+  .art-head { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+  .back { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 1.6rem; }
+  .back:hover { color: var(--gold); }
+  .art-head h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.9rem, 4.6vw, 2.7rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 1.1rem; text-wrap: balance; }
+  .art-meta { display: flex; gap: 1rem; align-items: baseline; font-family: var(--font-head); font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .art-meta .cat { color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.78rem; }
+
+  .art-body { padding: 2.6rem 0 4rem; }
+  .art-body p { font-size: 1.08rem; line-height: 1.68; margin: 0 0 1.4rem; text-align: justify; hyphens: auto; }
+  .art-body h2 { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; letter-spacing: -0.005em; margin: 2.4rem 0 1.1rem; }
+  .lead { font-size: 1.2rem; font-weight: 500; color: var(--ink); }
+  .pull { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; line-height: 1.35; color: var(--ink); border-left: 3px solid var(--gold); padding-left: 1.3rem; margin: 2.2rem 0; text-wrap: balance; }
+
+  .sources { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .sources h3 { font-family: var(--font-head); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 1rem; }
+  .sources ol { margin: 0; padding-left: 1.2rem; }
+  .sources li { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.5rem; line-height: 1.5; }
+  .sources a { color: var(--muted); text-decoration: underline; }
+  .sources a:hover { color: var(--gold); }
+
+  footer { background: var(--black); color: var(--white); padding: 3.2rem 0 2.4rem; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+  .foot-social { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+  .foot-social a { color: var(--muted-on-black); transition: color 0.2s; display: inline-flex; text-decoration: none; }
+  .foot-social a:hover { color: var(--white); }
+  .foot-social .handle { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; color: var(--muted-on-black); margin-left: 0.3rem; }
+  .foot-rights { color: var(--muted-on-black); font-size: 0.82rem; }
+</style>
+<meta name="description" content="O YouTube Music passou a rotular faixas como Fully Gen AI ou Partly Gen AI, com base na declaração de selos e distribuidoras e em detecção própria. Entenda como funciona e o que muda pra quem lança música.">
+<meta name="blog-excerpt" content="O YouTube Music começou a rotular faixas feitas por IA como Fully Gen AI ou Partly Gen AI. A declaração vem do selo ou distribuidora, via DDEX ou planilha, e o que não for declarado vira 'desconhecido'.">
+<link rel="canonical" href="https://kapota.com.br/blog/youtube-music-selo-musica-ia-fully-gen-ai/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../assets/icon-192.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="O YouTube Music começou a carimbar música feita por IA, e quem decide o carimbo é o próprio selo — Klysman Kley">
+<meta property="og:description" content="O YouTube Music passou a rotular faixas como Fully Gen AI ou Partly Gen AI, com base na declaração de selos e distribuidoras e em detecção própria. Entenda como funciona e o que muda pra quem lança música.">
+<meta property="og:url" content="https://kapota.com.br/blog/youtube-music-selo-musica-ia-fully-gen-ai/">
+<meta property="og:image" content="https://kapota.com.br/assets/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Klysman Kley">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O YouTube Music começou a carimbar música feita por IA, e quem decide o carimbo é o próprio selo — Klysman Kley">
+<meta name="twitter:description" content="O YouTube Music passou a rotular faixas como Fully Gen AI ou Partly Gen AI, com base na declaração de selos e distribuidoras e em detecção própria. Entenda como funciona e o que muda pra quem lança música.">
+<meta name="twitter:image" content="https://kapota.com.br/assets/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"O YouTube Music começou a carimbar música feita por IA, e quem decide o carimbo é o próprio selo","datePublished":"2026-10-17","author":{"@type":"Person","name":"Klysman Kley","alternateName":"Kapota"},"publisher":{"@type":"Person","name":"Klysman Kley"},"mainEntityOfPage":"https://kapota.com.br/blog/youtube-music-selo-musica-ia-fully-gen-ai/","image":"https://kapota.com.br/assets/og-image.jpg"}</script>
+</head>
+<body>
+<nav class="navbar">
+  <a class="logo" href="../../"><span class="badge-check" aria-hidden="true">&#10003;</span>@kapotalk</a>
+  <div class="links">
+    <a href="../../">Início</a>
+    <a href="../">Blog</a>
+  </div>
+</nav>
+<header class="art-head">
+  <div class="wrap">
+    <a class="back" href="../">&larr; Voltar pro blog</a>
+    <div class="art-meta">
+      <span class="cat">Radar de Notícias</span>
+      <span>17 de outubro de 2026</span>
+    </div>
+    <h1>O YouTube Music começou a carimbar música feita por IA, e quem decide o carimbo é o próprio selo</h1>
+  </div>
+</header>
+<article class="art-body">
+  <div class="wrap">
+    <p class="lead">O YouTube Music começou a exibir, na página do player, um aviso em faixas criadas com inteligência artificial generativa. As categorias são Fully Gen AI, quando tudo foi feito com IA, e Partly Gen AI, quando só parte da obra veio de IA. O mais importante pra quem lança música é o jeito como o carimbo nasce: a primeira fonte é o que o selo ou a distribuidora declara na entrega.</p>
+    <h2>Como o rótulo chega até a faixa</h2>
+    <p>A regra está numa página de ajuda do YouTube voltada a parceiros de música. Quem entrega o catálogo informa o uso de IA pelo padrão DDEX, a partir da versão ERN 4.3.2, ou por uma planilha CSV com uma coluna chamada contains_ai, que aceita os valores all, partly, none e unknown. Quem não entrega por nenhum dos dois caminhos pode marcar a informação direto no YouTube Studio. Os rótulos começaram a aparecer em 14 de outubro, e a imprensa especializada relata que, ao tocar no aviso, o ouvinte abre um menu com mais detalhes sobre a faixa.</p>
+    <p>As três categorias do lado de quem entrega são Fully Gen AI, Partly Gen AI e No Gen AI. O YouTube dá exemplos na própria página. Uma faixa baixada a partir de um prompt de texto é Fully. Uma linha de baixo gerada por IA com vocal e instrumentos tocados por cima é Partly, assim como letra ou melodia que a IA ajudou a criar antes da gravação em estúdio, e até o videoclipe feito com IA sobre um áudio humano. Já correção de afinação do tipo Auto-Tune e masterização automatizada contam como No Gen AI.</p>
+    <h2>E quando ninguém declara</h2>
+    <p>Se o parceiro não informa nada, o valor vira desconhecido, a não ser que o YouTube consiga determinar o status por outros sinais. A plataforma diz que usa ferramentas próprias de detecção e que pode, por conta própria, marcar uma faixa como total ou parcialmente feita por IA. O valor desconhecido também serve pra limpar uma declaração errada feita antes, o que mostra que o sistema prevê correção de rota.</p>
+    <p class="pull">A definição de onde termina a ferramenta e começa a obra gerada fica com quem entrega, porque a própria página diz que cada parceiro decide como aplicar as definições do DDEX ao seu conteúdo.</p>
+    <h2>O que os concorrentes já fazem</h2>
+    <p>O YouTube chega depois do Deezer, que rotula faixas totalmente geradas por IA desde junho de 2025 com detecção própria e oferece um filtro pra o ouvinte tirar essas faixas, álbuns e artistas dos resultados. O Spotify testa a divulgação de IA nos créditos das músicas, e o Apple Music já anunciou que pretende exibir rótulos de Made With AI. Pelo que foi reportado até agora, o YouTube Music não traz filtro nenhum: o ouvinte vê o aviso, mas não consegue escondê-lo.</p>
+    <p>Sobre dinheiro há divergência entre os veículos. A página de ajuda não traz regra de monetização. Um site de notícias de IA cita uma orientação do YouTube de que o uso de IA, sozinho, não torna uma faixa inelegível pra monetização, enquanto outro afirma que a plataforma não disse se o rótulo afeta recomendação ou pagamento de royalties. Até a empresa se pronunciar de forma clara, o mais seguro é tratar o ponto como em aberto.</p>
+    <h2>O que isso muda</h2>
+    <p>Pra quem lança música, a mudança prática está no processo de entrega. A pergunta sobre IA deixa de ser curiosidade e vira campo de metadado, com consequência pública. Selo e distribuidora que não perguntarem ao artista como a faixa foi feita vão entregar a coluna em branco, e a coluna em branco pode virar uma classificação feita pelo detector da plataforma, sem direito de explicação prévia. O caminho mais sensato é registrar, faixa a faixa, o que foi gerado e o que foi tocado, porque o Partly Gen AI pega muito mais gente do que parece: basta uma camada de IA no meio da produção.</p>
+    <p>Pro ouvinte, o efeito mais provável é uma pequena desconfiança nova diante de qualquer faixa sem selo. Em um catálogo que já recebe dezenas de milhares de uploads por dia, o aviso funciona menos como punição e mais como etiqueta de ingrediente. Quem produz com IA de forma transparente deve sair bem. Quem esconde corre o risco de ser rotulado de fora pra dentro, e perde a chance de contar a própria versão.</p>
+    <div class="sources">
+      <h3>Fontes</h3>
+      <ol>
+        <li><a href="https://support.google.com/youtube/answer/17124251?hl=en" target="_blank" rel="noopener">YouTube Help: Disclose Gen AI usage for music content</a></li>
+        <li><a href="https://routenote.com/blog/youtube-music-ai-generated-music-labels/" target="_blank" rel="noopener">RouteNote</a></li>
+        <li><a href="https://www.techrepublic.com/article/news-youtube-music-ai-generated-song-labels/" target="_blank" rel="noopener">TechRepublic</a></li>
+        <li><a href="https://aiweekly.co/alerts/youtube-music-rolls-out-ai-labels-keeps-them-monetized" target="_blank" rel="noopener">AI Weekly</a></li>
+      </ol>
+    </div>
+  </div>
+</article>
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-social">
+        <a href="https://instagram.com/kapotalk" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://tiktok.com/@kapotalk" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14.5 3c.4 2.2 1.9 3.7 4.2 3.9v2.7c-1.5.1-2.9-.3-4.2-1.2v6.4c0 3-2.4 5.2-5.3 5.2-3 0-5.3-2.4-5.3-5.3 0-3 2.4-5.3 5.3-5.3.4 0 .8 0 1.2.1v2.8c-.4-.1-.8-.2-1.2-.2-1.5 0-2.6 1.2-2.6 2.6 0 1.5 1.2 2.6 2.6 2.6 1.5 0 2.7-1.1 2.7-2.6V3h2.6z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kapotalk/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="9" width="3.5" height="12" rx="0.5"/><circle cx="4.75" cy="4.75" r="2.1"/><path d="M10 9h3.4v1.7c.7-1.1 1.9-2 3.7-2 3 0 3.9 1.9 3.9 4.6V21h-3.5v-6.1c0-1.4-.5-2.4-1.8-2.4-1.4 0-2.2 1-2.2 2.4V21H10z"/></svg>
+        </a>
+        <span class="handle">@kapotalk</span>
+      </div>
+      <span class="foot-rights">Todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/newsletter.js" defer></script>
+</body>
+</html>
