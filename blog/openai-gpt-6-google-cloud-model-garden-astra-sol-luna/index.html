@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Google começou a vender o GPT-6, rival direto do Gemini, dentro da própria nuvem — Klysman Kley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --paper: #f4f3f0;
+    --ink: #101010;
+    --muted: #6b6b6b;
+    --muted-on-black: #9a9a9a;
+    --line: #00000018;
+    --line-on-black: rgba(255, 255, 255, 0.14);
+    --gold: #b3711f;
+    --gold-on-black: #e0a24d;
+    --font-head: "Space Grotesk", ui-sans-serif, sans-serif;
+    --font-body: "JUST Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  a { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  nav a, .navbar a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .navbar { position: sticky; top: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 1.5rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .navbar .logo { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .navbar .logo .badge-check { width: 16px; height: 16px; border-radius: 50%; background: #3897f0; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; line-height: 1; flex: none; }
+  .navbar .links { display: flex; gap: 1.6rem; font-size: 0.9rem; font-weight: 600; }
+  .navbar .links a:hover { color: var(--gold); }
+
+  .art-head { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+  .back { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 1.6rem; }
+  .back:hover { color: var(--gold); }
+  .art-head h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.9rem, 4.6vw, 2.7rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 1.1rem; text-wrap: balance; }
+  .art-meta { display: flex; gap: 1rem; align-items: baseline; font-family: var(--font-head); font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .art-meta .cat { color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.78rem; }
+
+  .art-body { padding: 2.6rem 0 4rem; }
+  .art-body p { font-size: 1.08rem; line-height: 1.68; margin: 0 0 1.4rem; text-align: justify; hyphens: auto; }
+  .art-body h2 { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; letter-spacing: -0.005em; margin: 2.4rem 0 1.1rem; }
+  .lead { font-size: 1.2rem; font-weight: 500; color: var(--ink); }
+  .pull { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; line-height: 1.35; color: var(--ink); border-left: 3px solid var(--gold); padding-left: 1.3rem; margin: 2.2rem 0; text-wrap: balance; }
+
+  .sources { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .sources h3 { font-family: var(--font-head); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 1rem; }
+  .sources ol { margin: 0; padding-left: 1.2rem; }
+  .sources li { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.5rem; line-height: 1.5; }
+  .sources a { color: var(--muted); text-decoration: underline; }
+  .sources a:hover { color: var(--gold); }
+
+  footer { background: var(--black); color: var(--white); padding: 3.2rem 0 2.4rem; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+  .foot-social { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+  .foot-social a { color: var(--muted-on-black); transition: color 0.2s; display: inline-flex; text-decoration: none; }
+  .foot-social a:hover { color: var(--white); }
+  .foot-social .handle { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; color: var(--muted-on-black); margin-left: 0.3rem; }
+  .foot-rights { color: var(--muted-on-black); font-size: 0.82rem; }
+</style>
+<meta name="description" content="GPT-6 Astra, Sol e Luna entraram em prévia no Model Garden do Google Cloud. Agora a OpenAI está nas três maiores nuvens dos EUA, e o Google vende Gemini, Claude e GPT na mesma prateleira.">
+<meta name="blog-excerpt" content="A OpenAI levou três modelos da família GPT-6 pro catálogo de IA do Google Cloud, em prévia fechada pra empresas. A exclusividade da Microsoft já tinha caído em abril. O Google agora vende o rival do Gemini, e o cliente paga tudo na mesma fatura.">
+<link rel="canonical" href="https://kapota.com.br/blog/openai-gpt-6-google-cloud-model-garden-astra-sol-luna/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../assets/icon-192.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="O Google começou a vender o GPT-6, rival direto do Gemini, dentro da própria nuvem — Klysman Kley">
+<meta property="og:description" content="GPT-6 Astra, Sol e Luna entraram em prévia no Model Garden do Google Cloud. Agora a OpenAI está nas três maiores nuvens dos EUA, e o Google vende Gemini, Claude e GPT na mesma prateleira.">
+<meta property="og:url" content="https://kapota.com.br/blog/openai-gpt-6-google-cloud-model-garden-astra-sol-luna/">
+<meta property="og:image" content="https://kapota.com.br/assets/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Klysman Kley">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O Google começou a vender o GPT-6, rival direto do Gemini, dentro da própria nuvem — Klysman Kley">
+<meta name="twitter:description" content="GPT-6 Astra, Sol e Luna entraram em prévia no Model Garden do Google Cloud. Agora a OpenAI está nas três maiores nuvens dos EUA, e o Google vende Gemini, Claude e GPT na mesma prateleira.">
+<meta name="twitter:image" content="https://kapota.com.br/assets/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"O Google começou a vender o GPT-6, rival direto do Gemini, dentro da própria nuvem","datePublished":"2026-10-24","author":{"@type":"Person","name":"Klysman Kley","alternateName":"Kapota"},"publisher":{"@type":"Person","name":"Klysman Kley"},"mainEntityOfPage":"https://kapota.com.br/blog/openai-gpt-6-google-cloud-model-garden-astra-sol-luna/","image":"https://kapota.com.br/assets/og-image.jpg"}</script>
+</head>
+<body>
+<nav class="navbar">
+  <a class="logo" href="../../"><span class="badge-check" aria-hidden="true">&#10003;</span>@kapotalk</a>
+  <div class="links">
+    <a href="../../">Início</a>
+    <a href="../">Blog</a>
+  </div>
+</nav>
+<header class="art-head">
+  <div class="wrap">
+    <a class="back" href="../">&larr; Voltar pro blog</a>
+    <div class="art-meta">
+      <span class="cat">Radar de Notícias</span>
+      <span>24 de outubro de 2026</span>
+    </div>
+    <h1>O Google começou a vender o GPT-6, rival direto do Gemini, dentro da própria nuvem</h1>
+  </div>
+</header>
+<article class="art-body">
+  <div class="wrap">
+    <p class="lead">A OpenAI e o Google Cloud anunciaram em 21 de outubro que três modelos da família GPT-6 entraram no Model Garden, o catálogo de IA da nuvem do Google: o GPT-6 Astra, o GPT-6.1 Sol e o GPT-6 Luna. Por enquanto é uma prévia fechada, liberada só pra clientes empresariais selecionados, e a versão aberta a todos foi prometida pras próximas semanas, sem data. Com isso, os modelos fechados da OpenAI passam a ser vendidos pelas três maiores nuvens dos Estados Unidos: Microsoft, Amazon e Google.</p>
+    <h2>A exclusividade da Microsoft já tinha caído em abril</h2>
+    <p>Muita manchete tratou o anúncio como o fim da exclusividade da Microsoft, mas essa porta abriu antes. Em 27 de abril de 2026, Microsoft e OpenAI reescreveram o acordo que fazia do Azure o único lugar pra uma empresa comprar os modelos da OpenAI pela nuvem. A Microsoft continua como parceira principal e mantém a licença sobre a tecnologia, e a OpenAI ganhou liberdade pra vender em outras nuvens. A Amazon se mexeu na mesma semana e colocou modelos da OpenAI no Bedrock, o catálogo de IA da AWS. A Oracle entrou em junho.</p>
+    <p>O que faltava era o Google, justamente o dono do Gemini, concorrente direto do GPT. Agora o cliente do Google Cloud pode usar os modelos por API, conectar o Codex, o agente de programação da OpenAI, à plataforma do Google e pagar tudo na mesma fatura, abatendo do contrato de consumo que já tem com a nuvem. O Google promete que os dados enviados ficam dentro do ambiente do cliente e não são usados pra treinar modelo. Recursos como retenção zero de dados e computação confidencial, que protege a informação até durante o processamento, ainda aparecem como "em breve".</p>
+    <h2>Uma prateleira com os três rivais</h2>
+    <p>Com a chegada da OpenAI, o Google diz ser a única nuvem de grande porte que oferece Gemini, Claude e GPT, os três principais modelos fechados do mercado, num catálogo de mais de 200 modelos. A Box, empresa de armazenamento de arquivos, foi o único cliente citado no anúncio. Nenhuma das duas empresas divulgou preço por uso. Segundo o SiliconANGLE, o Sol custa cinco vezes menos que o Astra e o Luna, cem vezes menos, em troca de alguma perda de qualidade.</p>
+    <p>O motivo de o Google abrir espaço pro rival aparece nos números. No prospecto de abertura de capital da Anthropic, citado pela Reuters, 47% da receita dela em 2025 veio das nuvens da Amazon e do Google. A nuvem virou o balcão onde as empresas compram IA, e quem controla o balcão ganha com qualquer modelo que saia dele. Mike Leone, analista da Moor Insights &amp; Strategy, resumiu o outro lado ao Axios: o Gemini agora vai ter que conquistar cliente com a OpenAI sentada do lado.</p>
+    <p class="pull">O Google aceitou vender o produto do concorrente porque, na nuvem, quem lucra é o dono da prateleira, seja qual for a marca na embalagem.</p>
+    <h2>O que isso muda</h2>
+    <p>Pra quem toca empresa, a notícia é boa por um motivo prático: diminui a dependência de um fornecedor só. Até pouco tempo, escolher a nuvem era quase escolher a IA junto. Agora dá pra ficar no provedor que você já usa e trocar de modelo conforme o custo e o resultado de cada tarefa, usando o Luna no volume do dia a dia e guardando o Astra pro que exige mais. Pra uma agência que produz legenda, roteiro, análise de campanha e atendimento em escala, essa troca pesa direto na margem.</p>
+    <p>O cuidado é não confundir anúncio com produto pronto. É uma prévia fechada, sem preço público e com parte da segurança prometida pra depois. Quem lida com dado sensível de cliente, contrato de artista ou informação de catálogo deve esperar a versão geral e ler as condições antes de mudar qualquer fluxo. A regra que eu sigo no ecossistema da ALKA é simples: testar o modelo novo numa tarefa pequena, medir o resultado e só depois decidir. Ter mais opção ajuda, mas a decisão continua sendo de quem testa.</p>
+    <div class="sources">
+      <h3>Fontes</h3>
+      <ol>
+        <li><a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers" target="_blank" rel="noopener">Google Cloud Blog</a></li>
+        <li><a href="https://siliconangle.com/2026/10/21/openai-to-make-its-most-advanced-ai-models-available-in-google-cloud/" target="_blank" rel="noopener">SiliconANGLE</a></li>
+        <li><a href="https://thenextweb.com/news/openai-models-codex-google-cloud" target="_blank" rel="noopener">The Next Web</a></li>
+        <li><a href="https://forkast.news/openai-models-land-on-google-cloud-frontier-distribution-goes-multi-cloud-while-the-watts-stay-exclusive/" target="_blank" rel="noopener">Forkast</a></li>
+      </ol>
+    </div>
+  </div>
+</article>
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-social">
+        <a href="https://instagram.com/kapotalk" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://tiktok.com/@kapotalk" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14.5 3c.4 2.2 1.9 3.7 4.2 3.9v2.7c-1.5.1-2.9-.3-4.2-1.2v6.4c0 3-2.4 5.2-5.3 5.2-3 0-5.3-2.4-5.3-5.3 0-3 2.4-5.3 5.3-5.3.4 0 .8 0 1.2.1v2.8c-.4-.1-.8-.2-1.2-.2-1.5 0-2.6 1.2-2.6 2.6 0 1.5 1.2 2.6 2.6 2.6 1.5 0 2.7-1.1 2.7-2.6V3h2.6z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kapotalk/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="9" width="3.5" height="12" rx="0.5"/><circle cx="4.75" cy="4.75" r="2.1"/><path d="M10 9h3.4v1.7c.7-1.1 1.9-2 3.7-2 3 0 3.9 1.9 3.9 4.6V21h-3.5v-6.1c0-1.4-.5-2.4-1.8-2.4-1.4 0-2.2 1-2.2 2.4V21H10z"/></svg>
+        </a>
+        <span class="handle">@kapotalk</span>
+      </div>
+      <span class="foot-rights">Todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/newsletter.js" defer></script>
+</body>
+</html>
