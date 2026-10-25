@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>O Mercado Livre lançou uma IA que decide onde seu anúncio aparece, até na Netflix e no Disney+, com dados de 131 milhões de compradores — Klysman Kley</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/fonts.css">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --paper: #f4f3f0;
+    --ink: #101010;
+    --muted: #6b6b6b;
+    --muted-on-black: #9a9a9a;
+    --line: #00000018;
+    --line-on-black: rgba(255, 255, 255, 0.14);
+    --gold: #b3711f;
+    --gold-on-black: #e0a24d;
+    --font-head: "Space Grotesk", ui-sans-serif, sans-serif;
+    --font-body: "JUST Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  a { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  nav a, .navbar a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
+
+  .navbar { position: sticky; top: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; padding: 1.4rem 1.5rem; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .navbar .logo { font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; display: inline-flex; align-items: center; gap: 0.4rem; }
+  .navbar .logo .badge-check { width: 16px; height: 16px; border-radius: 50%; background: #3897f0; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; line-height: 1; flex: none; }
+  .navbar .links { display: flex; gap: 1.6rem; font-size: 0.9rem; font-weight: 600; }
+  .navbar .links a:hover { color: var(--gold); }
+
+  .art-head { padding: 3.5rem 0 2.5rem; border-bottom: 1px solid var(--line); }
+  .back { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 1.6rem; }
+  .back:hover { color: var(--gold); }
+  .art-head h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(1.9rem, 4.6vw, 2.7rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 1.1rem; text-wrap: balance; }
+  .art-meta { display: flex; gap: 1rem; align-items: baseline; font-family: var(--font-head); font-size: 0.85rem; color: var(--muted); flex-wrap: wrap; }
+  .art-meta .cat { color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; font-size: 0.78rem; }
+
+  .art-body { padding: 2.6rem 0 4rem; }
+  .art-body p { font-size: 1.08rem; line-height: 1.68; margin: 0 0 1.4rem; text-align: justify; hyphens: auto; }
+  .art-body h2 { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; letter-spacing: -0.005em; margin: 2.4rem 0 1.1rem; }
+  .lead { font-size: 1.2rem; font-weight: 500; color: var(--ink); }
+  .pull { font-family: var(--font-head); font-weight: 700; font-size: 1.4rem; line-height: 1.35; color: var(--ink); border-left: 3px solid var(--gold); padding-left: 1.3rem; margin: 2.2rem 0; text-wrap: balance; }
+
+  .sources { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+  .sources h3 { font-family: var(--font-head); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin: 0 0 1rem; }
+  .sources ol { margin: 0; padding-left: 1.2rem; }
+  .sources li { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.5rem; line-height: 1.5; }
+  .sources a { color: var(--muted); text-decoration: underline; }
+  .sources a:hover { color: var(--gold); }
+
+  footer { background: var(--black); color: var(--white); padding: 3.2rem 0 2.4rem; }
+  .foot-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8rem; }
+  .foot-social { display: flex; align-items: center; gap: 1.1rem; flex-wrap: wrap; }
+  .foot-social a { color: var(--muted-on-black); transition: color 0.2s; display: inline-flex; text-decoration: none; }
+  .foot-social a:hover { color: var(--white); }
+  .foot-social .handle { font-family: var(--font-head); font-weight: 700; font-size: 0.95rem; color: var(--muted-on-black); margin-left: 0.3rem; }
+  .foot-rights { color: var(--muted-on-black); font-size: 0.82rem; }
+</style>
+<meta name="description" content="O Mercado Ads lançou o Engage+, IA que automatiza campanhas de topo de funil com sinais de 131 milhões de compradores. Os resultados do teste são da própria empresa.">
+<meta name="blog-excerpt" content="O Engage+ usa sinais de mais de 131 milhões de compradores do Mercado Livre pra prever interesse e escolher onde o anúncio passa, dentro e fora do marketplace. Já está no Brasil, mas os números de resultado vêm do próprio Mercado Ads.">
+<link rel="canonical" href="https://kapota.com.br/blog/mercado-ads-engage-plus-ia-topo-funil-131-milhoes-compradores/">
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="../../assets/icon-192.png">
+<link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="O Mercado Livre lançou uma IA que decide onde seu anúncio aparece, até na Netflix e no Disney+, com dados de 131 milhões de compradores — Klysman Kley">
+<meta property="og:description" content="O Mercado Ads lançou o Engage+, IA que automatiza campanhas de topo de funil com sinais de 131 milhões de compradores. Os resultados do teste são da própria empresa.">
+<meta property="og:url" content="https://kapota.com.br/blog/mercado-ads-engage-plus-ia-topo-funil-131-milhoes-compradores/">
+<meta property="og:image" content="https://kapota.com.br/assets/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Klysman Kley">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O Mercado Livre lançou uma IA que decide onde seu anúncio aparece, até na Netflix e no Disney+, com dados de 131 milhões de compradores — Klysman Kley">
+<meta name="twitter:description" content="O Mercado Ads lançou o Engage+, IA que automatiza campanhas de topo de funil com sinais de 131 milhões de compradores. Os resultados do teste são da própria empresa.">
+<meta name="twitter:image" content="https://kapota.com.br/assets/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"O Mercado Livre lançou uma IA que decide onde seu anúncio aparece, até na Netflix e no Disney+, com dados de 131 milhões de compradores","datePublished":"2026-10-25","author":{"@type":"Person","name":"Klysman Kley","alternateName":"Kapota"},"publisher":{"@type":"Person","name":"Klysman Kley"},"mainEntityOfPage":"https://kapota.com.br/blog/mercado-ads-engage-plus-ia-topo-funil-131-milhoes-compradores/","image":"https://kapota.com.br/assets/og-image.jpg"}</script>
+</head>
+<body>
+<nav class="navbar">
+  <a class="logo" href="../../"><span class="badge-check" aria-hidden="true">&#10003;</span>@kapotalk</a>
+  <div class="links">
+    <a href="../../">Início</a>
+    <a href="../">Blog</a>
+  </div>
+</nav>
+<header class="art-head">
+  <div class="wrap">
+    <a class="back" href="../">&larr; Voltar pro blog</a>
+    <div class="art-meta">
+      <span class="cat">Radar de Notícias</span>
+      <span>25 de outubro de 2026</span>
+    </div>
+    <h1>O Mercado Livre lançou uma IA que decide onde seu anúncio aparece, até na Netflix e no Disney+, com dados de 131 milhões de compradores</h1>
+  </div>
+</header>
+<article class="art-body">
+  <div class="wrap">
+    <p class="lead">O Mercado Ads, unidade de publicidade do Mercado Livre, lançou entre 21 e 22 de outubro o Engage+, uma ferramenta que usa inteligência artificial pra automatizar campanhas de topo de funil, a fase em que a marca quer ser lembrada, e ainda não vender. A IA usa sinais de mais de 131 milhões de compradores pra prever o interesse de cada pessoa e decidir formato, frequência e lugar do anúncio, inclusive fora do Mercado Livre, em canais como Netflix, Disney+ e HBO Max. O produto já está disponível pra anunciantes do Brasil e de outros países da América Latina.</p>
+    <h2>De anúncio de busca a propaganda de televisão</h2>
+    <p>Durante anos, o Mercado Ads foi sinônimo de anúncio dentro do marketplace: o produto patrocinado que aparece quando você já está procurando algo. É publicidade perto da compra. O topo de funil fica no extremo oposto, é a campanha de vídeo e display que faz a pessoa conhecer uma marca antes de ter qualquer intenção de comprar. O Engage+ é a tentativa do Mercado Livre de ocupar também essa etapa, usando o que ele tem de mais raro: o histórico de compra de uma base enorme de consumidores.</p>
+    <p>Na prática, a IA escolhe sozinha o formato do anúncio, quantas vezes ele aparece e em que ambiente, seja no Mercado Play, em sites ou em serviços de streaming como Netflix, Disney+, HBO Max e Roku. Depois, a ferramenta acompanha o que a pessoa fez após ver a propaganda, como buscar a marca ou colocar um produto no carrinho, e sugere ajustes. Segundo o Mercado Ads, a medição usa dados observados na plataforma, e não estimativas. Marcio Souza, diretor sênior do Mercado Ads no Brasil, disse que é a primeira vez que anunciantes poderão prever o que o consumidor vai querer.</p>
+    <h2>Os números, e quem os divulgou</h2>
+    <p>Os resultados de teste divulgados são bons: com a marca Arno, o Mercado Ads relata 140% mais visitas à página, 67% mais novos compradores e engajamento 15 vezes maior. Só que o número vem da própria empresa, e a divulgação não traz o tamanho da campanha, o período nem o que foi usado como base de comparação. Também vale lembrar que a palavra primeira vez, usada no lançamento, é uma afirmação do Mercado Ads, e não de um terceiro.</p>
+    <p>O contexto de negócio explica o movimento. No segundo trimestre de 2026, o MercadoLibre faturou US$ 10,2 bilhões, alta de 50% sobre o ano anterior. A receita de publicidade cresceu 62% em câmbio neutro, e a empresa passou pela primeira vez de 10% do mercado publicitário digital da América Latina, segundo o site argentino Mercado. Outro veículo, o Consumidor Moderno, cita crescimento de 73% na publicidade, uma diferença que provavelmente vem da base de cálculo, mas que eu não consegui confirmar no balanço oficial.</p>
+    <p class="pull">O Mercado Livre sabe o que você comprou. Agora quer usar isso pra decidir o que você vai ver na Netflix.</p>
+    <h2>O que isso muda</h2>
+    <p>Olhando como empresário, o recado é de dependência. Quem anuncia passa a entregar a decisão de formato, frequência e lugar pra uma caixa-preta que também é dona dos dados e de quem mede o resultado. Pode funcionar muito bem, e talvez funcione, mas quem mede o próprio trabalho tem um incentivo óbvio pra mostrar que ele deu certo. Antes de pôr verba grande, eu pediria um teste com grupo de controle, pra saber o que as vendas fariam sem o anúncio. Pra pequena e média empresa que não tem equipe de mídia, a automação é uma porta de entrada real, desde que alguém confira os números.</p>
+    <p>Pra quem trabalha com música e marketing, o ponto interessante é o dado de compra. Saber o que a pessoa leva no carrinho é um sinal bem diferente de saber o que ela ouve, e as plataformas de anúncio da região estão correndo pra juntar os dois. Um artista ou selo que vende disco, camiseta ou ingresso na internet tem informação de consumo que vale ouro nessa conversa, e eu começaria organizando esses dados em casa. Por enquanto, vale acompanhar os primeiros relatos de anunciantes que não sejam o próprio Mercado Ads.</p>
+    <div class="sources">
+      <h3>Fontes</h3>
+      <ol>
+        <li><a href="https://propmark.com.br/midia/mercado-ads-passa-a-usar-ia-para-automatizar-campanhas-publicitarias/" target="_blank" rel="noopener">Propmark</a></li>
+        <li><a href="https://www.meioemensagem.com.br/midia/ia-mercado-ads-automatiza-campanhas" target="_blank" rel="noopener">Meio &amp; Mensagem</a></li>
+        <li><a href="https://mercado.com.ar/finanzas/mercadolibre-facturo-us-10-169-millones-en-el-segundo-trimestre-de-2026" target="_blank" rel="noopener">Mercado (Argentina)</a></li>
+        <li><a href="https://consumidormoderno.com.br/mercado-livre-10-bilhoes-experiencia" target="_blank" rel="noopener">Consumidor Moderno</a></li>
+      </ol>
+    </div>
+  </div>
+</article>
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-social">
+        <a href="https://instagram.com/kapotalk" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://tiktok.com/@kapotalk" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M14.5 3c.4 2.2 1.9 3.7 4.2 3.9v2.7c-1.5.1-2.9-.3-4.2-1.2v6.4c0 3-2.4 5.2-5.3 5.2-3 0-5.3-2.4-5.3-5.3 0-3 2.4-5.3 5.3-5.3.4 0 .8 0 1.2.1v2.8c-.4-.1-.8-.2-1.2-.2-1.5 0-2.6 1.2-2.6 2.6 0 1.5 1.2 2.6 2.6 2.6 1.5 0 2.7-1.1 2.7-2.6V3h2.6z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kapotalk/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="3" y="9" width="3.5" height="12" rx="0.5"/><circle cx="4.75" cy="4.75" r="2.1"/><path d="M10 9h3.4v1.7c.7-1.1 1.9-2 3.7-2 3 0 3.9 1.9 3.9 4.6V21h-3.5v-6.1c0-1.4-.5-2.4-1.8-2.4-1.4 0-2.2 1-2.2 2.4V21H10z"/></svg>
+        </a>
+        <span class="handle">@kapotalk</span>
+      </div>
+      <span class="foot-rights">Todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/newsletter.js" defer></script>
+</body>
+</html>
